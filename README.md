@@ -1,2 +1,8 @@
 # Ace-CET-6-Words
 这是一个无痛背单词的项目，旨在英译英背单词，打破中译英思维。/his painless word-memorization project uses English-to-English learning to eliminate Chinese-to-English translation thinking.
+
+网页的第一幕是只有一个音标，并可以点击播放单词的读音声音，音标下面有一个小框可以供用户写进去单词，然后默写正确就显示绿色对勾，默写错误就显示红色叉号。接着给出正确单词。一次页面只背一个单词。
+第二幕是在第一幕的基础上给出一个含这个单词的句子。这个句子的来源是网上搜索六级原句或ai生成的高质量句子。
+最后第三幕在前两幕的基础上给出这个单词的英文释义，及近义词。这个来源是ai智能生成的。下面附上两个按钮，forget和remember.系统划分词库所有单词为两种形式，即forget和remember。初始词库的单词全为forget，每当用户背一个单词并选择点击remember按钮才把这个对应的单词放到remember的词库中。系统第一幕给出要背的单词都是从forget词库中随机挑选的。
+最重要的一点，这是个全英背单词的网站，不出现中文释义，对单词的解释用基础英语解释。
+左上角有两个按钮，F和R，点击可以分别跳到forget和remember两个词库进行总览。并且forget词库里有加号标志，用于用户添加要背诵的英语单词
