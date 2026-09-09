@@ -1,0 +1,8 @@
+# --- Node / dev tooling (only needed to regenerate screenshots) ---
+node_modules/
+tools/node_modules/
+
+# --- OS noise ---
+Thumbs.db
+Desktop.ini
+.DS_Store
