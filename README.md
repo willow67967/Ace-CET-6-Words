@@ -1,5 +1,5 @@
 # Ace-CET-6-Words
-这是一个无痛背单词的项目，旨在英译英背单词，打破中译英思维。/his painless word-memorization project uses English-to-English learning to eliminate Chinese-to-English translation thinking.
+这是一个无痛背单词的项目，旨在英译英背单词，打破中译英思维。/This painless word-memorization project uses English-to-English learning to eliminate Chinese-to-English translation thinking.
 
 网页的第一幕是只有一个音标，并可以点击播放单词的读音声音，音标下面有一个小框可以供用户写进去单词，然后默写正确就显示绿色对勾，默写错误就显示红色叉号。接着给出正确单词。一次页面只背一个单词。
 第二幕是在第一幕的基础上给出一个含这个单词的句子。这个句子的来源是网上搜索六级原句或ai生成的高质量句子。
