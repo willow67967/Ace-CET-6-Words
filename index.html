@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>6Vocab · Full English</title>
+    <!-- SEO：便于搜索引擎与 GitHub 检索到 -->
+    <meta name="description" content="6Vocab — a painless, 100% English-only CET-6 word trainer: hear the pronunciation, spell it from memory, then read it in a real sentence and learn its simple-English definition and synonyms. 无痛全英背单词：听音默写 → 语境例句 → 英语释义，告别中译英思维。" />
+    <meta name="keywords" content="6Vocab, CET-6, 六级词汇, 背单词, English vocabulary, learn English, 英译英, spelling trainer, flashcards" />
+    <meta name="theme-color" content="#1e293b" />
+    <!-- 分享预览卡片（微信/QQ/Twitter 转发时显示标题与配图） -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="6Vocab · Ace CET-6 Words" />
+    <meta property="og:title" content="6Vocab · 无痛全英背单词（CET-6）" />
+    <meta property="og:description" content="Hear it. Spell it. Read it. Own it. A free, offline, English-only CET-6 vocabulary trainer." />
+    <meta property="og:url" content="https://github.com/willow67967/Ace-CET-6-Words" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/willow67967/Ace-CET-6-Words/main/assets/screenshots/step1-spell.png" />
+    <!-- 内联 SVG 图标，无外部请求 -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231e293b'/%3E%3Ctext x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='Segoe UI, Arial'%3E6%3C/text%3E%3C/svg%3E" />
     <style>
         /* ----- global reset & base ----- */
         * {
@@ -810,15 +823,14 @@
             { word: "circumstance", phonetic: "/ˈsɜːkəmstəns/", sentence: "Due to unforeseen circumstances, the event was cancelled.", definition: "a condition or fact that affects a situation", synonyms: ["condition", "situation", "context"] },
             { word: "civil", phonetic: "/ˈsɪvəl/", sentence: "We must maintain civil relations with our neighbors.", definition: "polite and courteous, or related to citizens", synonyms: ["polite", "courteous", "civic"] },
             { word: "clash", phonetic: "/klæʃ/", sentence: "The two armies clashed in a fierce battle.", definition: "a violent confrontation or a disagreement", synonyms: ["conflict", "collision", "disagreement"] },
-            { word: "collapse", phonetic: "/kəˈlæps/", sentence: "The building collapsed during the earthquake.", definition: "to fall down suddenly, or to fail completely", synonyms: ["crumble", "fall", "disintegrate"] },
-            { word: "collapse (economy)", phonetic: "/kəˈlæps/", sentence: "The economy collapsed after the crisis.", definition: "to fail suddenly or completely", synonyms: ["fail", "crash", "fall apart"] },
+            { word: "collapse", phonetic: "/kəˈlæps/", sentence: "The building collapsed during the earthquake.", definition: "to fall down suddenly, or to fail completely; a system or market can also collapse", synonyms: ["crumble", "fall", "disintegrate"] },
             { word: "combat", phonetic: "/ˈkɒmbæt/", sentence: "The soldiers are trained for combat.", definition: "fighting or warfare between armed forces", synonyms: ["battle", "war", "conflict"] },
             { word: "commit", phonetic: "/kəˈmɪt/", sentence: "He committed a serious crime.", definition: "to do something wrong or illegal", synonyms: ["perpetrate", "carry out", "execute"] },
             { word: "commitment", phonetic: "/kəˈmɪtmənt/", sentence: "Her commitment to the project is admirable.", definition: "a strong dedication or promise to do something", synonyms: ["dedication", "loyalty", "pledge"] },
             { word: "commodity", phonetic: "/kəˈmɒdəti/", sentence: "Oil is a valuable commodity.", definition: "a raw material or primary agricultural product that can be bought and sold", synonyms: ["good", "product", "item"] },
             { word: "commonplace", phonetic: "/ˈkɒmənpleɪs/", sentence: "Smartphones are now commonplace.", definition: "ordinary or not unusual", synonyms: ["ordinary", "everyday", "common"] },
             { word: "compact", phonetic: "/kəmˈpækt/", sentence: "This is a compact and portable device.", definition: "small and efficiently arranged", synonyms: ["small", "neat", "tight"] },
-            { word: "compatible", phonetic: "/kəmˈpætəbəl/", sentence: "The software is compatible with Windows.", definition: "able to work or exist together without problems", synonyms: ["compatible", "harmonious", "consistent"] },
+            { word: "compatible", phonetic: "/kəmˈpætəbəl/", sentence: "The software is compatible with Windows.", definition: "able to work or exist together without problems", synonyms: ["harmonious", "consistent", "well-matched"] },
             { word: "compel", phonetic: "/kəmˈpel/", sentence: "The law compels drivers to wear seatbelts.", definition: "to force someone to do something", synonyms: ["force", "oblige", "coerce"] },
             { word: "compensate", phonetic: "/ˈkɒmpenseɪt/", sentence: "The company compensated him for the injury.", definition: "to pay someone for loss or damage, or to balance something", synonyms: ["repay", "reimburse", "offset"] },
             { word: "compete", phonetic: "/kəmˈpiːt/", sentence: "Several companies compete for the contract.", definition: "to try to win something by defeating others", synonyms: ["contend", "vie", "rival"] },
@@ -1016,7 +1028,7 @@
             // ---- G ----
             { word: "genuine", phonetic: "/ˈdʒenjuɪn/", sentence: "The painting is genuine.", definition: "real and not a copy or fake", synonyms: ["authentic", "real", "bona fide"] },
             { word: "global", phonetic: "/ˈɡləʊbəl/", sentence: "Climate change is a global issue.", definition: "relating to the whole world", synonyms: ["worldwide", "international", "planetary"] },
-            { word: "gloomy", phonetic: "/ˈɡluːmi/", sentence: "The weather is gloomy today.", definition: "dark and depressing, or feeling sad", synonyms: ["dark", "dreary", "gloomy"] },
+            { word: "gloomy", phonetic: "/ˈɡluːmi/", sentence: "The weather is gloomy today.", definition: "dark and depressing, or feeling sad", synonyms: ["dark", "dreary", "dismal"] },
             { word: "gratitude", phonetic: "/ˈɡrætɪtjuːd/", sentence: "She expressed her gratitude for the help.", definition: "the feeling of being thankful and appreciative", synonyms: ["thanks", "appreciation", "recognition"] },
             { word: "guarantee", phonetic: "/ˌɡærənˈtiː/", sentence: "The product comes with a guarantee.", definition: "a promise that something will be done or will happen", synonyms: ["warranty", "pledge", "assurance"] },
             // ---- H ----
@@ -1335,6 +1347,8 @@
 
         // DOM refs
         const $ = id => document.getElementById(id);
+        // escape user text before injecting into innerHTML (XSS-safe)
+        const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
         const dot1 = $('dot1'),
             dot2 = $('dot2'),
             dot3 = $('dot3');
@@ -1504,9 +1518,9 @@
             stepLabel.textContent = 'Step 2 · Example';
             // 设置例句
             let sent = currentWordObj.sentence || 'No example sentence available.';
-            const w = currentWordObj.word;
+            const w = esc(currentWordObj.word);
             const regex = new RegExp(`\\b${w}\\b`, 'gi');
-            sent = sent.replace(regex, `<span class="target-word">${w}</span>`);
+            sent = esc(sent).replace(regex, `<span class="target-word">${w}</span>`);
             sentenceDisplay.innerHTML = sent;
             // 初始隐藏定义块，显示 continue 按钮
             definitionBlock.classList.add('hidden');
@@ -1526,7 +1540,7 @@
             definitionDisplay.textContent = currentWordObj.definition || 'Definition not available.';
             const syns = currentWordObj.synonyms || [];
             if (syns.length > 0) {
-                synonymsDisplay.innerHTML = `<strong>↗ similar:</strong> ${syns.map(s => `<span>${s}</span>`).join(' ')}`;
+                synonymsDisplay.innerHTML = `<strong>↗ similar:</strong> ${syns.map(s => `<span>${esc(s)}</span>`).join(' ')}`;
             } else {
                 synonymsDisplay.innerHTML = `<strong>↗ similar:</strong> <span style="color:#94a3b8;">—</span>`;
             }
@@ -1615,7 +1629,7 @@
                 return obj ? obj.word : w;
             });
             forgetListGrid.innerHTML = forgetItems.map(w =>
-                `<span class="word-tag">${w} <button class="remove-btn" data-word="${w}" data-list="forget">✕</button></span>`
+                `<span class="word-tag">${esc(w)} <button class="remove-btn" data-word="${esc(w)}" data-list="forget" title="Remove ${esc(w)}">✕</button></span>`
             ).join('');
             listForgetCount.textContent = forgetItems.length;
 
@@ -1624,7 +1638,7 @@
                 return obj ? obj.word : w;
             });
             rememberListGrid.innerHTML = rememberItems.map(w =>
-                `<span class="word-tag">${w} <button class="remove-btn" data-word="${w}" data-list="remember">✕</button></span>`
+                `<span class="word-tag">${esc(w)} <button class="remove-btn" data-word="${esc(w)}" data-list="remember" title="Remove ${esc(w)}">✕</button></span>`
             ).join('');
             listRememberCount.textContent = rememberItems.length;
 
@@ -1721,6 +1735,10 @@
                 alert('Please enter a word.');
                 return;
             }
+            if (!/^[A-Za-z][A-Za-z' -]{0,44}$/.test(word)) {
+                alert('Please enter a valid English word: start with a letter, then letters, spaces, hyphens or apostrophes only.');
+                return;
+            }
             if (!definition) {
                 alert('Please enter a definition (basic English).');
                 return;
@@ -1751,10 +1769,20 @@
         // ============================================================
         function speakWord() {
             if (!currentWordObj) return;
+            if (!('speechSynthesis' in window)) return;
+            // 避免快速连点时语音排队
+            if (speechSynthesis.speaking) speechSynthesis.cancel();
             const utterance = new SpeechSynthesisUtterance(currentWordObj.word);
             utterance.lang = 'en-US';
             utterance.rate = 0.85;
             utterance.pitch = 1;
+            // 优先选择自然的英语语音
+            const voices = speechSynthesis.getVoices();
+            const pick =
+                voices.find(v => /^en(-|_)/i.test(v.lang) && /Google US English|Microsoft (Aria|Guy|Jenny|Zira)|Samantha|Daniel/i.test(v.name)) ||
+                voices.find(v => v.lang === 'en-US') ||
+                voices.find(v => /^en/i.test(v.lang));
+            if (pick) utterance.voice = pick;
             speechSynthesis.speak(utterance);
             // 让输入框重新获得焦点
             if (!step1.classList.contains('hidden')) {

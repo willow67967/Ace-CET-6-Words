@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎧 Ace CET-6 Words
+# 🎧 6Vocab · Ace CET-6 Words
 ### 无痛全英背单词 · Learn English, in English — no Chinese crutches.
 
 **Hear it → Spell it → Read it → Own it.**
@@ -40,29 +40,29 @@ When you learn `abandon = 放弃`, your brain stores a *translation*, and every 
 
 ## 🕹️ How it works / 三步学习法
 
-Every round shows you **one word in three steps**. You only advance when *you* say so.
+Every round takes you through **one word in three steps** — and nothing moves forward until *you* click **Continue →** yourself.
 
 ### Step 1 · Spell / 第一步:听音默写
-You see **only the phonetic** (plus a 🔊 button). Type the word from memory — green ✅ or red ❌ feedback, then the answer is revealed.
+You see **only the phonetic** (plus a 🔊 button). Type the word from memory — green ✅ or red ❌ feedback, then the correct spelling is revealed.
 
 <p align="center">
-  <img src="assets/screenshots/step1-spell.png" width="540" alt="Step 1 — spell from pronunciation">
-  <br><sub>Step 1: only the phonetic is shown — the answer stays hidden until you check.</sub>
+  <img src="assets/screenshots/step1-spell.png" width="560" alt="Step 1 — spell from pronunciation">
+  <br><sub>Step 1: only the phonetic is shown — no Chinese, no answer leak.</sub>
 </p>
 
 ### Step 2 · Example / 第二步:语境例句
-A natural example sentence appears with the word highlighted — you meet the word in context, exactly how it will appear in the exam.
+A natural example sentence appears with the target word highlighted — you meet the word exactly the way it shows up in the exam. Click **Continue →** when you are ready.
 
 <p align="center">
-  <img src="assets/screenshots/step2-sentence.png" width="540" alt="Step 2 — example sentence">
+  <img src="assets/screenshots/step2-sentence.png" width="560" alt="Step 2 — example sentence">
 </p>
 
-### Step 3 · Meaning & synonyms / 第三步:英语释义
-A **simple-English definition** and similar words cement the *concept* — then decide: did you learn it (**Remember**) or not yet (**Forget**)?
+### Step 3 · Meaning & synonyms / 第三步:英语释义(同屏展开)
+The **simple-English definition + synonyms** unfold on the *same* screen while the sentence stays visible, so spelling, context and concept click together in one glance. Then decide honestly: **Remember** (✅) or **Forget** (❌).
 
 <p align="center">
-  <img src="assets/screenshots/step3-definition.png" width="540" alt="Step 3 — definition & synonyms">
-  <br><sub>Correct / wrong / example / definition / decks — full flow demo below.</sub>
+  <img src="assets/screenshots/step3-definition.png" width="560" alt="Step 3 — definition & synonyms">
+  <br><sub>Steps 2 &amp; 3 share one screen: sentence first, meaning revealed after Continue.</sub>
 </p>
 
 <p align="center">
@@ -77,7 +77,7 @@ A **simple-English definition** and similar words cement the *concept* — then 
 
 ## 🚀 Quick start / 快速开始
 
-**Option A — just try it:** enable GitHub Pages (one-time, 3 clicks) 👉 [github.com/willow67967/Ace-CET-6-Words/settings/pages](https://github.com/willow67967/Ace-CET-6-Words/settings/pages) → **Source: Deploy from a branch** → `main` / `(root)` → Save. Then open **<https://willow67967.github.io/Ace-CET-6-Words/>** 🎉
+**Option A — use it online, right now:** 👉 **<https://willow67967.github.io/Ace-CET-6-Words/>** (hosted free on GitHub Pages)
 
 **Option B — run locally:**
 
@@ -87,6 +87,8 @@ cd Ace-CET-6-Words
 python3 -m http.server 8000     # then open http://localhost:8000
 # or simply double-click index.html — it works from file:// too
 ```
+
+> ℹ️ The online demo **auto-updates**: every push to `main` is published by GitHub Pages within a minute or two.
 
 ## ⌨️ Keyboard shortcuts / 快捷键
 
@@ -136,7 +138,7 @@ Ideas are welcome — open an [issue](https://github.com/willow67967/Ace-CET-6-W
 
 1. Fork it and clone.
 2. Test locally (`python3 -m http.server`) — the app is one file, easy to review.
-3. To regenerate the screenshots above, drive `index.html` in a headless browser and save the PNGs to `assets/screenshots/` (the files here were captured at 1100×900).
+3. To regenerate the screenshots above, drive `index.html` in a headless browser (the PNGs here were captured in headless Edge at a 1100×900 window) and save them to `assets/screenshots/`.
 4. Commit with a clear message and open a Pull Request. 💚
 
 ## 📄 License / 许可
