@@ -3,19 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ace CET-6 Words · 无痛全英背单词 | Learn English in English</title>
-    <meta name="description" content="A painless, 100% English-only CET-6 word trainer: hear the pronunciation, spell it from memory, read it in a real sentence, and learn its simple-English definition & synonyms. 无痛全英背单词：听音默写 → 语境例句 → 英语释义，彻底告别中译英思维。" />
-    <meta name="keywords" content="CET-6, 六级词汇, 背单词, English vocabulary, learn English, 英译英, spelling trainer, flashcards, vocabulary app" />
-    <meta name="theme-color" content="#4f46e5" />
-    <!-- Open Graph (share preview) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Ace CET-6 Words" />
-    <meta property="og:title" content="Ace CET-6 Words · 无痛全英背单词" />
-    <meta property="og:description" content="Hear it. Spell it. Read it. Own it. A free, offline, English-only CET-6 vocabulary trainer." />
-    <meta property="og:url" content="https://github.com/willow67967/Ace-CET-6-Words" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/willow67967/Ace-CET-6-Words/main/assets/screenshots/step1-spell.png" />
-    <!-- favicon (inline, no external request) -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%234f46e5'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Segoe UI, Arial'%3EA%3C/text%3E%3C/svg%3E" />
+    <title>6Vocab · Full English</title>
     <style>
         /* ----- global reset & base ----- */
         * {
@@ -24,12 +12,8 @@
             box-sizing: border-box;
         }
         body {
-            font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-            background:
-                radial-gradient(1100px 640px at 8% -12%, rgba(99, 102, 241, 0.16), transparent 62%),
-                radial-gradient(1000px 560px at 108% 4%, rgba(16, 185, 129, 0.12), transparent 58%),
-                radial-gradient(900px 700px at 50% 118%, rgba(244, 63, 94, 0.07), transparent 60%),
-                #f6f7fd;
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            background: #f6f8fa;
             color: #1e293b;
             min-height: 100vh;
             display: flex;
@@ -281,7 +265,7 @@
             display: none;
         }
 
-        /* ----- step 2: sentence ----- */
+        /* ----- step 2: sentence + definition (merged) ----- */
         .sentence-area {
             margin: 8px 0 4px;
             padding: 16px 20px;
@@ -310,11 +294,8 @@
             text-decoration-thickness: 2px;
             text-decoration-color: #94a3b8;
         }
-        .sentence-area .continue-btn {
-            margin-top: 16px;
-        }
 
-        /* ----- step 3: definition + synonyms + buttons ----- */
+        /* definition block inside step2 */
         .def-area {
             margin: 12px 0 8px;
             padding: 16px 20px;
@@ -607,237 +588,6 @@
             gap: 4px;
         }
 
-        /* ============================================================
-           polish & theming (overrides)
-           ============================================================ */
-        ::selection {
-            background: rgba(99, 102, 241, 0.22);
-        }
-
-        .app {
-            border: 1px solid rgba(255, 255, 255, 0.65);
-            box-shadow: 0 24px 60px -18px rgba(15, 23, 42, 0.18), 0 10px 26px -14px rgba(15, 23, 42, 0.10);
-        }
-
-        .top-bar .brand {
-            background: linear-gradient(135deg, #eef2ff, #e0f2fe);
-            border: 1px solid rgba(99, 102, 241, 0.14);
-            color: #3730a3;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .nav-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .nav-btn.active {
-            background: linear-gradient(135deg, #6366f1, #4f46e5);
-            border-color: transparent;
-            box-shadow: 0 6px 16px -6px rgba(79, 70, 229, 0.55);
-        }
-
-        .step-dot.active {
-            background: linear-gradient(90deg, #6366f1, #4f46e5);
-            width: 30px;
-            box-shadow: 0 2px 8px -1px rgba(79, 70, 229, 0.5);
-        }
-
-        .step-dot.done {
-            background: #10b981;
-        }
-
-        .step-label {
-            letter-spacing: 0.4px;
-        }
-
-        .learn-card {
-            border: 1px solid rgba(226, 232, 240, 0.9);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 10px 30px -18px rgba(15, 23, 42, 0.14);
-        }
-
-        .phonetic {
-            font-family: Georgia, 'Times New Roman', serif;
-            background: linear-gradient(135deg, #eef2ff, #f1f5f9);
-            border: 1px solid rgba(99, 102, 241, 0.12);
-        }
-
-        .audio-btn {
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #eef2ff, #e0e7ff);
-            border: 1px solid rgba(99, 102, 241, 0.18);
-            font-size: 24px;
-            margin-left: 14px;
-            box-shadow: 0 4px 12px -6px rgba(79, 70, 229, 0.35);
-        }
-
-        .audio-btn:disabled {
-            opacity: 0.4;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .word-input:focus {
-            border-color: #6366f1;
-            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.14);
-        }
-
-        .word-input.correct {
-            border-color: #10b981;
-            background: #ecfdf5;
-            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.12);
-        }
-
-        .word-input.wrong {
-            border-color: #f43f5e;
-            background: #fff1f2;
-            box-shadow: 0 0 0 4px rgba(244, 63, 94, 0.10);
-            animation: shake 0.4s ease;
-        }
-
-        .check-btn {
-            background: linear-gradient(135deg, #6366f1, #4f46e5);
-            box-shadow: 0 8px 18px -8px rgba(79, 70, 229, 0.6);
-        }
-
-        .check-btn:hover {
-            background: linear-gradient(135deg, #4f46e5, #4338ca);
-        }
-
-        .check-btn:disabled {
-            opacity: 0.45;
-            cursor: not-allowed;
-        }
-
-        .continue-btn {
-            background: linear-gradient(135deg, #6366f1, #4f46e5);
-            box-shadow: 0 8px 18px -8px rgba(79, 70, 229, 0.55);
-        }
-
-        .continue-btn:hover {
-            background: linear-gradient(135deg, #4f46e5, #4338ca);
-        }
-
-        .action-btn.forget {
-            background: #fff;
-            border: 2px solid #e2e8f0;
-            color: #475569;
-        }
-
-        .action-btn.forget:hover {
-            background: #fff5f5;
-            border-color: #fecdd3;
-            color: #e11d48;
-        }
-
-        .action-btn.remember {
-            background: linear-gradient(135deg, #10b981, #059669);
-            box-shadow: 0 8px 18px -8px rgba(16, 185, 129, 0.55);
-        }
-
-        .action-btn.remember:hover {
-            background: linear-gradient(135deg, #059669, #047857);
-        }
-
-        .list-header .game-btn,
-        .add-btn {
-            background: linear-gradient(135deg, #6366f1, #4f46e5);
-            box-shadow: 0 6px 14px -7px rgba(79, 70, 229, 0.5);
-        }
-
-        .list-header .game-btn:hover,
-        .add-btn:hover {
-            background: linear-gradient(135deg, #4f46e5, #4338ca);
-        }
-
-        .modal-actions .submit {
-            background: linear-gradient(135deg, #6366f1, #4f46e5);
-        }
-
-        .modal-actions .submit:hover {
-            background: linear-gradient(135deg, #4f46e5, #4338ca);
-        }
-
-        .sentence-area {
-            border-left-color: #6366f1;
-            background: linear-gradient(135deg, #fafaff, #f8fafc);
-        }
-
-        .sentence-area .target-word {
-            color: #4f46e5;
-            text-decoration-color: #c7d2fe;
-            background: linear-gradient(transparent 62%, rgba(199, 210, 254, 0.55) 62%);
-            border-radius: 2px;
-        }
-
-        .list-grid::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .list-grid::-webkit-scrollbar-thumb {
-            background: #e2e8f0;
-            border-radius: 8px;
-        }
-
-        .feedback .icon {
-            font-size: 40px;
-        }
-
-        #feedbackIcon {
-            display: inline-block;
-            animation: pop-in 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        .step-enter {
-            animation: fade-up 0.30s ease;
-        }
-
-        .kbd-hint {
-            margin-top: 14px;
-            padding-top: 10px;
-            border-top: 1px dashed #e2e8f0;
-            text-align: center;
-            font-size: 12.5px;
-            color: #94a3b8;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px 14px;
-            justify-content: center;
-        }
-
-        .kbd-hint kbd {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-            font-size: 11px;
-            background: #f1f5f9;
-            border: 1px solid #e2e8f0;
-            border-bottom-width: 2px;
-            border-radius: 6px;
-            padding: 1px 6px;
-            color: #475569;
-        }
-
-        @keyframes shake {
-            10%, 90% { transform: translateX(-1px); }
-            20%, 80% { transform: translateX(2px); }
-            30%, 50%, 70% { transform: translateX(-4px); }
-            40%, 60% { transform: translateX(4px); }
-        }
-
-        @keyframes pop-in {
-            0% { transform: scale(0.4); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
-        @keyframes fade-up {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
         /* responsive */
         @media (max-width: 600px) {
             .app {
@@ -872,10 +622,10 @@
     <div class="app" id="app">
         <!-- top bar -->
         <div class="top-bar">
-            <div class="brand">🎧 Ace CET-6 Words</div>
+            <div class="brand">🎧 6Vocab</div>
             <div class="nav-group">
-                <button class="nav-btn" id="navForget" data-list="forget" title="Forget deck — press F">F <span class="badge" id="forgetCount">0</span></button>
-                <button class="nav-btn" id="navRemember" data-list="remember" title="Remember deck — press R">R <span class="badge" id="rememberCount">0</span></button>
+                <button class="nav-btn" id="navForget" data-list="forget">F <span class="badge" id="forgetCount">0</span></button>
+                <button class="nav-btn" id="navRemember" data-list="remember">R <span class="badge" id="rememberCount">0</span></button>
             </div>
         </div>
 
@@ -893,11 +643,11 @@
             <div id="step1">
                 <div class="phonetic-area">
                     <span class="phonetic" id="phoneticDisplay">/ˈæbəndən/</span>
-                    <button class="audio-btn" id="audioBtn" title="Listen to pronunciation" aria-label="Listen to pronunciation">🔊</button>
+                    <button class="audio-btn" id="audioBtn" title="Listen to pronunciation">🔊</button>
                 </div>
                 <div class="input-area">
                     <div class="input-row">
-                        <input class="word-input" id="wordInput" type="text" placeholder="type the word you heard…" autofocus spellcheck="false" autocomplete="off" autocapitalize="none" autocorrect="off" />
+                        <input class="word-input" id="wordInput" type="text" placeholder="type the word..." autofocus spellcheck="false" autocomplete="off" />
                         <button class="check-btn" id="checkBtn">Check</button>
                     </div>
                     <div class="feedback" id="feedback">
@@ -908,38 +658,32 @@
                 </div>
             </div>
 
-            <!-- ====== STEP 2 ====== -->
+            <!-- ====== STEP 2 (merged with step 3) ====== -->
             <div id="step2" class="hidden">
                 <div class="sentence-area">
                     <div class="label">📖 Example sentence</div>
                     <div class="sentence" id="sentenceDisplay">The crew <span class="target-word">abandoned</span> the sinking ship.</div>
-                    <button class="continue-btn" id="continueStep2Btn">Continue →</button>
                 </div>
-            </div>
 
-            <!-- ====== STEP 3 ====== -->
-            <div id="step3" class="hidden">
-                <div class="def-area">
-                    <div class="label">📘 Definition</div>
-                    <div class="definition" id="definitionDisplay">to leave somebody/something, especially somebody/something you are responsible for, with no intention of returning</div>
-                    <div class="synonyms" id="synonymsDisplay"><strong>↗ similar:</strong> <span>desert</span> <span>forsake</span> <span>give up</span></div>
+                <!-- definition & synonyms block, initially hidden -->
+                <div id="definitionBlock" class="hidden">
+                    <div class="def-area">
+                        <div class="label">📘 Definition</div>
+                        <div class="definition" id="definitionDisplay">to leave somebody/something, especially somebody/something you are responsible for, with no intention of returning</div>
+                        <div class="synonyms" id="synonymsDisplay"><strong>↗ similar:</strong> <span>desert</span> <span>forsake</span> <span>give up</span></div>
+                    </div>
+                    <div class="action-row">
+                        <button class="action-btn forget" id="forgetBtn">❌ Forget</button>
+                        <button class="action-btn remember" id="rememberBtn">✅ Remember</button>
+                    </div>
                 </div>
-                <div class="action-row">
-                    <button class="action-btn forget" id="forgetBtn">❌ Forget</button>
-                    <button class="action-btn remember" id="rememberBtn">✅ Remember</button>
-                </div>
+
+                <button class="continue-btn" id="continueStep2Btn">Continue →</button>
             </div>
 
             <!-- status line -->
             <div class="status-line">
                 <span id="statusProgress">📚 Forget: <strong id="statusForget">0</strong> · Remember: <strong id="statusRemember">0</strong></span>
-                <span id="statusWord">⚡ <span id="statusCurrentWord">—</span></span>
-            </div>
-            <div class="kbd-hint">
-                <span><kbd>Enter</kbd> check spelling</span>
-                <span><kbd>F</kbd> / <kbd>R</kbd> switch decks</span>
-                <span><kbd>Esc</kbd> go back</span>
-                <span>🔊 pronunciation uses your browser voice</span>
             </div>
         </div>
 
@@ -1067,13 +811,14 @@
             { word: "civil", phonetic: "/ˈsɪvəl/", sentence: "We must maintain civil relations with our neighbors.", definition: "polite and courteous, or related to citizens", synonyms: ["polite", "courteous", "civic"] },
             { word: "clash", phonetic: "/klæʃ/", sentence: "The two armies clashed in a fierce battle.", definition: "a violent confrontation or a disagreement", synonyms: ["conflict", "collision", "disagreement"] },
             { word: "collapse", phonetic: "/kəˈlæps/", sentence: "The building collapsed during the earthquake.", definition: "to fall down suddenly, or to fail completely", synonyms: ["crumble", "fall", "disintegrate"] },
+            { word: "collapse (economy)", phonetic: "/kəˈlæps/", sentence: "The economy collapsed after the crisis.", definition: "to fail suddenly or completely", synonyms: ["fail", "crash", "fall apart"] },
             { word: "combat", phonetic: "/ˈkɒmbæt/", sentence: "The soldiers are trained for combat.", definition: "fighting or warfare between armed forces", synonyms: ["battle", "war", "conflict"] },
             { word: "commit", phonetic: "/kəˈmɪt/", sentence: "He committed a serious crime.", definition: "to do something wrong or illegal", synonyms: ["perpetrate", "carry out", "execute"] },
             { word: "commitment", phonetic: "/kəˈmɪtmənt/", sentence: "Her commitment to the project is admirable.", definition: "a strong dedication or promise to do something", synonyms: ["dedication", "loyalty", "pledge"] },
             { word: "commodity", phonetic: "/kəˈmɒdəti/", sentence: "Oil is a valuable commodity.", definition: "a raw material or primary agricultural product that can be bought and sold", synonyms: ["good", "product", "item"] },
             { word: "commonplace", phonetic: "/ˈkɒmənpleɪs/", sentence: "Smartphones are now commonplace.", definition: "ordinary or not unusual", synonyms: ["ordinary", "everyday", "common"] },
             { word: "compact", phonetic: "/kəmˈpækt/", sentence: "This is a compact and portable device.", definition: "small and efficiently arranged", synonyms: ["small", "neat", "tight"] },
-            { word: "compatible", phonetic: "/kəmˈpætəbəl/", sentence: "The software is compatible with Windows.", definition: "able to work or exist together without problems", synonyms: ["harmonious", "consistent", "well-matched"] },
+            { word: "compatible", phonetic: "/kəmˈpætəbəl/", sentence: "The software is compatible with Windows.", definition: "able to work or exist together without problems", synonyms: ["compatible", "harmonious", "consistent"] },
             { word: "compel", phonetic: "/kəmˈpel/", sentence: "The law compels drivers to wear seatbelts.", definition: "to force someone to do something", synonyms: ["force", "oblige", "coerce"] },
             { word: "compensate", phonetic: "/ˈkɒmpenseɪt/", sentence: "The company compensated him for the injury.", definition: "to pay someone for loss or damage, or to balance something", synonyms: ["repay", "reimburse", "offset"] },
             { word: "compete", phonetic: "/kəmˈpiːt/", sentence: "Several companies compete for the contract.", definition: "to try to win something by defeating others", synonyms: ["contend", "vie", "rival"] },
@@ -1271,7 +1016,7 @@
             // ---- G ----
             { word: "genuine", phonetic: "/ˈdʒenjuɪn/", sentence: "The painting is genuine.", definition: "real and not a copy or fake", synonyms: ["authentic", "real", "bona fide"] },
             { word: "global", phonetic: "/ˈɡləʊbəl/", sentence: "Climate change is a global issue.", definition: "relating to the whole world", synonyms: ["worldwide", "international", "planetary"] },
-            { word: "gloomy", phonetic: "/ˈɡluːmi/", sentence: "The weather is gloomy today.", definition: "dark and depressing, or feeling sad", synonyms: ["dark", "dreary", "dismal"] },
+            { word: "gloomy", phonetic: "/ˈɡluːmi/", sentence: "The weather is gloomy today.", definition: "dark and depressing, or feeling sad", synonyms: ["dark", "dreary", "gloomy"] },
             { word: "gratitude", phonetic: "/ˈɡrætɪtjuːd/", sentence: "She expressed her gratitude for the help.", definition: "the feeling of being thankful and appreciative", synonyms: ["thanks", "appreciation", "recognition"] },
             { word: "guarantee", phonetic: "/ˌɡærənˈtiː/", sentence: "The product comes with a guarantee.", definition: "a promise that something will be done or will happen", synonyms: ["warranty", "pledge", "assurance"] },
             // ---- H ----
@@ -1585,22 +1330,17 @@
         let forgetWords = []; // array of word strings
         let rememberWords = []; // array of word strings
         let currentWordObj = null; // the full object of current word
-        let currentStep = 1; // 1,2,3
+        let currentStep = 1; // 1,2,3 (2 and 3 merged, still keep for logic)
         let isCorrect = false; // for step1
 
         // DOM refs
         const $ = id => document.getElementById(id);
-        // escape user text before injecting into innerHTML (XSS-safe)
-        const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-        // gentle fade-up each time a step panel appears
-        const animateStep = el => { if (!el) return; el.classList.remove('step-enter'); void el.offsetWidth; el.classList.add('step-enter'); };
         const dot1 = $('dot1'),
             dot2 = $('dot2'),
             dot3 = $('dot3');
         const stepLabel = $('stepLabel');
         const step1 = $('step1');
         const step2 = $('step2');
-        const step3 = $('step3');
         const phoneticDisplay = $('phoneticDisplay');
         const audioBtn = $('audioBtn');
         const wordInput = $('wordInput');
@@ -1610,11 +1350,12 @@
         const sentenceDisplay = $('sentenceDisplay');
         const definitionDisplay = $('definitionDisplay');
         const synonymsDisplay = $('synonymsDisplay');
+        const definitionBlock = $('definitionBlock');
+        const continueStep2Btn = $('continueStep2Btn');
         const forgetBtn = $('forgetBtn');
         const rememberBtn = $('rememberBtn');
         const statusForget = $('statusForget');
         const statusRemember = $('statusRemember');
-        const statusCurrentWord = $('statusCurrentWord');
         const navForget = $('navForget');
         const navRemember = $('navRemember');
         const forgetListView = $('forgetListView');
@@ -1633,7 +1374,6 @@
         const newDefinition = $('newDefinition');
         const newSynonyms = $('newSynonyms');
         const continueStep1Btn = $('continueStep1Btn');
-        const continueStep2Btn = $('continueStep2Btn');
         const gameFromForget = $('gameFromForget');
         const gameFromRemember = $('gameFromRemember');
 
@@ -1719,7 +1459,6 @@
         function renderEmptyState() {
             step1.classList.remove('hidden');
             step2.classList.add('hidden');
-            step3.classList.add('hidden');
             dot1.className = 'step-dot active';
             dot2.className = 'step-dot';
             dot3.className = 'step-dot';
@@ -1732,19 +1471,13 @@
             wordInput.disabled = true;
             checkBtn.disabled = true;
             continueStep1Btn.classList.add('hidden');
-            sentenceDisplay.textContent = 'You have remembered every word! Add new ones with the ＋ button.';
-            definitionDisplay.textContent = 'Amazing work! Keep learning.';
-            synonymsDisplay.innerHTML = '';
-            statusCurrentWord.textContent = '—';
             audioBtn.disabled = true;
-            animateStep(step1);
         }
 
         function renderStep1() {
             if (!currentWordObj) { renderEmptyState(); return; }
             step1.classList.remove('hidden');
             step2.classList.add('hidden');
-            step3.classList.add('hidden');
             dot1.className = 'step-dot active';
             dot2.className = 'step-dot';
             dot3.className = 'step-dot';
@@ -1758,45 +1491,45 @@
             feedbackIcon.textContent = '';
             feedbackText.textContent = '';
             wordInput.focus();
-            statusCurrentWord.textContent = '—'; // the answer stays hidden until the user checks
             audioBtn.disabled = false;
-            animateStep(step1);
         }
 
         function renderStep2() {
             if (!currentWordObj) return;
             step1.classList.add('hidden');
             step2.classList.remove('hidden');
-            step3.classList.add('hidden');
             dot1.className = 'step-dot done';
             dot2.className = 'step-dot active';
             dot3.className = 'step-dot';
             stepLabel.textContent = 'Step 2 · Example';
+            // 设置例句
             let sent = currentWordObj.sentence || 'No example sentence available.';
-            const w = esc(currentWordObj.word);
+            const w = currentWordObj.word;
             const regex = new RegExp(`\\b${w}\\b`, 'gi');
-            sent = esc(sent).replace(regex, `<span class="target-word">${w}</span>`);
+            sent = sent.replace(regex, `<span class="target-word">${w}</span>`);
             sentenceDisplay.innerHTML = sent;
-            animateStep(step2);
+            // 初始隐藏定义块，显示 continue 按钮
+            definitionBlock.classList.add('hidden');
+            continueStep2Btn.classList.remove('hidden');
         }
 
-        function renderStep3() {
+        function showDefinition() {
             if (!currentWordObj) return;
-            step1.classList.add('hidden');
-            step2.classList.add('hidden');
-            step3.classList.remove('hidden');
-            dot1.className = 'step-dot done';
+            // 显示定义块，隐藏 continue 按钮
+            definitionBlock.classList.remove('hidden');
+            continueStep2Btn.classList.add('hidden');
+            // 更新指示器
             dot2.className = 'step-dot done';
             dot3.className = 'step-dot active';
             stepLabel.textContent = 'Step 3 · Meaning & Synonyms';
+            // 填充内容
             definitionDisplay.textContent = currentWordObj.definition || 'Definition not available.';
             const syns = currentWordObj.synonyms || [];
             if (syns.length > 0) {
-                synonymsDisplay.innerHTML = `<strong>↗ similar:</strong> ${syns.map(s => `<span>${esc(s)}</span>`).join(' ')}`;
+                synonymsDisplay.innerHTML = `<strong>↗ similar:</strong> ${syns.map(s => `<span>${s}</span>`).join(' ')}`;
             } else {
                 synonymsDisplay.innerHTML = `<strong>↗ similar:</strong> <span style="color:#94a3b8;">—</span>`;
             }
-            animateStep(step3);
         }
 
         // ============================================================
@@ -1820,9 +1553,8 @@
             } else {
                 wordInput.className = 'word-input wrong';
                 feedbackIcon.textContent = '❌';
-                feedbackText.innerHTML = `Wrong! Correct: <span class="correct-answer">${esc(currentWordObj.word)}</span>`;
+                feedbackText.innerHTML = `Wrong! Correct: <span class="correct-answer">${currentWordObj.word}</span>`;
             }
-            statusCurrentWord.textContent = currentWordObj.word; // reveal after the attempt
             continueStep1Btn.classList.remove('hidden');
         }
 
@@ -1831,20 +1563,12 @@
         // ============================================================
         function continueToStep2() {
             if (!currentWordObj) return;
-            // ensure the user has checked (either correct or wrong)
-            // but if they haven't, we allow? We'll force a check by checking if feedback is empty
             if (feedbackIcon.textContent === '' && feedbackText.textContent === '') {
-                // they didn't check; we can show a prompt
                 feedbackIcon.textContent = '⚠️';
                 feedbackText.textContent = 'Please check your spelling first.';
                 return;
             }
             renderStep2();
-        }
-
-        function continueToStep3() {
-            if (!currentWordObj) return;
-            renderStep3();
         }
 
         // ============================================================
@@ -1891,7 +1615,7 @@
                 return obj ? obj.word : w;
             });
             forgetListGrid.innerHTML = forgetItems.map(w =>
-                `<span class="word-tag">${esc(w)} <button class="remove-btn" data-word="${w}" data-list="forget" title="Remove ${esc(w)}">✕</button></span>`
+                `<span class="word-tag">${w} <button class="remove-btn" data-word="${w}" data-list="forget">✕</button></span>`
             ).join('');
             listForgetCount.textContent = forgetItems.length;
 
@@ -1900,7 +1624,7 @@
                 return obj ? obj.word : w;
             });
             rememberListGrid.innerHTML = rememberItems.map(w =>
-                `<span class="word-tag">${esc(w)} <button class="remove-btn" data-word="${w}" data-list="remember" title="Remove ${esc(w)}">✕</button></span>`
+                `<span class="word-tag">${w} <button class="remove-btn" data-word="${w}" data-list="remember">✕</button></span>`
             ).join('');
             listRememberCount.textContent = rememberItems.length;
 
@@ -1938,7 +1662,6 @@
         function showListView(type) {
             step1.classList.add('hidden');
             step2.classList.add('hidden');
-            step3.classList.add('hidden');
             if (type === 'forget') {
                 forgetListView.classList.add('visible');
                 rememberListView.classList.remove('visible');
@@ -1961,8 +1684,7 @@
             navRemember.classList.remove('active');
             if (currentWordObj) {
                 if (currentStep === 1) renderStep1();
-                else if (currentStep === 2) renderStep2();
-                else renderStep3();
+                else renderStep2(); // 合并后，step2 包含定义块
             } else {
                 pickRandomWord();
             }
@@ -1999,10 +1721,6 @@
                 alert('Please enter a word.');
                 return;
             }
-            if (!/^[A-Za-z][A-Za-z' -]{0,44}$/.test(word)) {
-                alert('Please enter a valid English word: start with a letter, then letters, spaces, hyphens or apostrophes only.');
-                return;
-            }
             if (!definition) {
                 alert('Please enter a definition (basic English).');
                 return;
@@ -2033,21 +1751,15 @@
         // ============================================================
         function speakWord() {
             if (!currentWordObj) return;
-            if (!('speechSynthesis' in window)) return;
-            // stop any previous utterance so rapid clicks don't queue up
-            if (speechSynthesis.speaking) speechSynthesis.cancel();
             const utterance = new SpeechSynthesisUtterance(currentWordObj.word);
             utterance.lang = 'en-US';
             utterance.rate = 0.85;
             utterance.pitch = 1;
-            // pick a natural English voice when available
-            const voices = speechSynthesis.getVoices();
-            const pick =
-                voices.find(v => /^en(-|_)/i.test(v.lang) && /Google US English|Microsoft (Aria|Guy|Jenny|Zira)|Samantha|Daniel/i.test(v.name)) ||
-                voices.find(v => v.lang === 'en-US') ||
-                voices.find(v => /^en/i.test(v.lang));
-            if (pick) utterance.voice = pick;
             speechSynthesis.speak(utterance);
+            // 让输入框重新获得焦点
+            if (!step1.classList.contains('hidden')) {
+                wordInput.focus();
+            }
         }
 
         // ============================================================
@@ -2067,7 +1779,7 @@
         rememberBtn.addEventListener('click', markRemember);
 
         continueStep1Btn.addEventListener('click', continueToStep2);
-        continueStep2Btn.addEventListener('click', continueToStep3);
+        continueStep2Btn.addEventListener('click', showDefinition);
 
         navForget.addEventListener('click', () => {
             if (forgetListView.classList.contains('visible')) {
@@ -2096,10 +1808,19 @@
         newWord.addEventListener('keydown', (e) => { if (e.key === 'Enter') submitNewWord(); });
         newDefinition.addEventListener('keydown', (e) => { if (e.key === 'Enter') submitNewWord(); });
 
-        // ====== FIX: ignore keyboard shortcuts when focus is inside input/textarea ======
+        // 点击非交互区域时，自动聚焦到输入框（仅当 Step1 可见时）
+        document.addEventListener('click', (e) => {
+            if (step1.classList.contains('hidden')) return;
+            const target = e.target;
+            if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.tagName === 'BUTTON' || target.tagName === 'A' || target.closest('button') || target.closest('a')) {
+                return;
+            }
+            wordInput.focus();
+        });
+
+        // 忽略 F/R 快捷键当焦点在输入框内
         document.addEventListener('keydown', (e) => {
             const target = e.target;
-            // Ignore shortcuts if user is typing in any input or textarea
             if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') {
                 return;
             }
@@ -2136,7 +1857,7 @@
         // ============================================================
         init();
 
-        console.log('📚 Ace CET-6 Words loaded. Total words:', wordList.length);
+        console.log('📚 6Vocab loaded. Total words:', wordList.length);
         console.log('💾 Forget:', forgetWords.length, 'Remember:', rememberWords.length);
     </script>
 </body>
